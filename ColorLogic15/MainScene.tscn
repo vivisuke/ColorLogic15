@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TitleBar.gd" type="Script" id=1]
 
 [node name="MainScene" type="Node2D"]
 
@@ -9,3 +11,30 @@ color = Color( 0.721569, 0.913725, 0.580392, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TitleBar" type="ColorRect" parent="."]
+margin_right = 500.0
+margin_bottom = 50.0
+color = Color( 0.415686, 0.537255, 0.8, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoardBG" type="ColorRect" parent="."]
+margin_left = 10.0
+margin_top = 150.0
+margin_right = 490.0
+margin_bottom = 630.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="BoardBG"]
+cell_size = Vector2( 32, 32 )
+format = 1
+
+[node name="Grid" type="ColorRect" parent="BoardBG"]
+margin_right = 480.0
+margin_bottom = 480.0
+color = Color( 1, 1, 1, 0 )
