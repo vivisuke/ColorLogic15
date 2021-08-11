@@ -1,3 +1,11 @@
 [gd_scene format=2]
 
 [node name="MainScene" type="Node2D"]
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 500.0
+margin_bottom = 800.0
+color = Color( 0.721569, 0.913725, 0.580392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
