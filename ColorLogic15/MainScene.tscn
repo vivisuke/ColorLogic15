@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://TitleBar.gd" type="Script" id=1]
 [ext_resource path="res://Grid.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://images/GB-3.png" type="Texture" id=4]
 [ext_resource path="res://images/GB-2.png" type="Texture" id=5]
 [ext_resource path="res://images/GB-0.png" type="Texture" id=6]
+[ext_resource path="res://images/GB-1-96x32.png" type="Texture" id=7]
+[ext_resource path="res://images/GB-3-96x32.png" type="Texture" id=8]
+[ext_resource path="res://images/GB-2-96x32.png" type="Texture" id=9]
+[ext_resource path="res://images/gray-96x32.png" type="Texture" id=10]
 
 [sub_resource type="TileSet" id=1]
 0/name = "GB-0.png 0"
@@ -80,6 +84,72 @@ margin_right = 500.0
 margin_bottom = 50.0
 color = Color( 0.415686, 0.537255, 0.8, 1 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 80.0
+margin_right = 500.0
+margin_bottom = 120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 102.0
+margin_top = 4.0
+margin_right = 398.0
+margin_bottom = 36.0
+
+[node name="Color3Button" type="TextureButton" parent="CenterContainer/HBoxContainer"]
+margin_right = 96.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 96, 0 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/HBoxContainer/Color3Button"]
+margin_top = 32.0
+margin_right = 96.0
+margin_bottom = 40.0
+color = Color( 1, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color2Button" type="TextureButton" parent="CenterContainer/HBoxContainer"]
+margin_left = 100.0
+margin_right = 196.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 96, 0 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/HBoxContainer/Color2Button"]
+visible = false
+margin_top = 32.0
+margin_right = 96.0
+margin_bottom = 40.0
+color = Color( 1, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Color1Button" type="TextureButton" parent="CenterContainer/HBoxContainer"]
+margin_left = 200.0
+margin_right = 296.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 64, 0 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer/HBoxContainer/Color1Button"]
+visible = false
+margin_top = 32.0
+margin_right = 96.0
+margin_bottom = 40.0
+color = Color( 1, 1, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
