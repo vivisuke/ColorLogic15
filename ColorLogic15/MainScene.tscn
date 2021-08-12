@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://TitleBar.gd" type="Script" id=1]
 [ext_resource path="res://Grid.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://images/GB-3-96x32.png" type="Texture" id=8]
 [ext_resource path="res://images/GB-2-96x32.png" type="Texture" id=9]
 [ext_resource path="res://images/gray-96x32.png" type="Texture" id=10]
+[ext_resource path="res://MainScene.gd" type="Script" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "GB-0.png 0"
@@ -70,6 +71,7 @@
 3/z_index = 0
 
 [node name="MainScene" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="BG" type="ColorRect" parent="."]
 margin_right = 500.0
@@ -176,3 +178,7 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Color3Button" to="." method="_on_Color3Button_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Color2Button" to="." method="_on_Color2Button_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/Color1Button" to="." method="_on_Color1Button_pressed"]
